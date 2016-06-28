@@ -1,0 +1,63 @@
+# Block viewing of htaccess files
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+# Prevent directory listings
+Options -Indexes
+
+# Set home.php as default index
+DirectoryIndex index.php
+
+# Turn on rewrite engine
+RewriteEngine On
+
+# Set the current directory as page root, allows relative links to work properly
+#RewriteBase /
+
+# Frontend
+RewriteRule ^/?$ index.php?controller=frontend&method=home [L,QSA]
+
+
+#RewriteRule ^/?$ home.php?controller=frontend&method=home [L,QSA]
+
+
+# Actors
+RewriteRule ^actors/?$ index.php?controller=actor&method=search [L,QSA]
+RewriteRule ^actors/?$ index.php?controller=actor&method=read [L,QSA]
+RewriteRule ^actors/create/?$ index.php?controller=actor&method=create [L,QSA]
+RewriteRule ^actors/([0-9])/update/?$ index.php?controller=actor&method=update&id=$1 [L,QSA]
+RewriteRule ^actors/(0-9)/delete/?$ index.php?controller=actor&method=delete&id=$1 [L,QSA]
+
+
+#Movies
+RewriteRule ^movies/?$ index.php?controller=movie&method=search [L,QSA]
+RewriteRule ^movies/?$ index.php?controller=movie&method=read [L,QSA]
+RewriteRule ^movies/create/?$ index.php?controller=movie&method=create [L,QSA]
+RewriteRule ^movies/([0-9])/update/?$ index.php?controller=movie&method=update&id=$1 [L,QSA]
+RewriteRule ^movies/(0-9)/delete/?$ index.php?controller=movie&method=delete&id=$1 [L,QSA]
+
+#Customers
+RewriteRule ^customers/?$ index.php?controller=customer&method=search [L,QSA]
+RewriteRule ^customers/?$ index.php?controller=customer&method=read [L,QSA]
+RewriteRule ^customers/create/?$ index.php?controller=customer&method=create [L,QSA]
+RewriteRule ^customers/([0-9])/update/?$ index.php?controller=customer&method=update&id=$1 [L,QSA]
+RewriteRule ^customers/(0-9)/delete/?$ index.php?controller=customer&method=delete&id=$1 [L,QSA]
+
+#Inventory
+RewriteRule ^inventory/?$ index.php?controller=inventory&method=search [L,QSA]
+RewriteRule ^inventory/?$ index.php?controller=inventory&method=read [L,QSA]
+RewriteRule ^inventory/create/?$ index.php?controller=inventory&method=create [L,QSA]
+RewriteRule ^inventory/([0-9])/update/?$ index.php?controller=inventory&method=update&id=$1 [L,QSA]
+RewriteRule ^inventory/(0-9)/delete/?$ index.php?controller=inventory&method=delet&id=$1 [L,QSA]
+
+#Rentals
+RewriteRule ^rentals/?$ index.php?controller=rental&method=search [L,QSA]
+RewriteRule ^rentals/?$ index.php?controller=rental&method=read [L,QSA]
+RewriteRule ^rentals/create/?$ index.php?controller=rental&method=create [L,QSA]
+RewriteRule ^rentals/([0-9])/update/?$ index.php?controller=rental&method=update&id=$1 [L,QSA]
+RewriteRule ^rentals/(0-9)/delete/?$ index.php?controller=rental&method=delet&id=$1 [L,QSA]
+
+
+

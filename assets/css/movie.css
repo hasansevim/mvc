@@ -1,0 +1,35 @@
+body {margin: 0; padding: 0;}
+div, nav, ul {display: block;}
+nav, wrapper {min-width: 800px;}
+nav { height: 80px; background: #333; width: 90%; margin: 0 auto; display: block;}
+nav ul {display: block; width: 95%; list-style: none; }
+nav ul li {float: right; margin-right: 10px; width: 100px; height: 50px; text-align: center;margin-top: 0;padding: 0; display: inline-block; background: #0C0; }
+nav ul li a {color: white; text-decoration: none; width: 100px;  height: 100%; 
+             display: inline-block;
+             line-height: 50px; font-size: 1.2rem; padding: 0;
+             background-color: #218B57;
+}
+nav ul li a:last-child {margin-right: 0;}
+nav ul li a:hover {height: 80px; background-color: #0c9;}
+nav ul li:first-child {float: left; margin-left: -20px; background: #C00;}
+nav ul li.redbackground a {background-color: #990000;}
+.contains {margin: 0; padding: 0; position: relative;}
+.wrapper {margin: 10px auto; width: 90%; }
+
+form {margin: 30px auto;}
+form input, button{ width: 30%; padding: 9px; box-sizing: border-box; }
+form input {border: 1px solid #990000;}
+form button {padding: 7px; font-size: medium; vertical-align: bottom;}
+tr, td {border: 1px solid black;}
+tr:nth-child(odd) {background:white; }
+tr:nth-child(even) {background: lightgray; }
+td {width: 150px; height: 30px; padding-left: 10px;}  
+td:last-child {width: 550px;}
+tr {height: 40px; width: auto;}
+table {border: 2px solid green; padding: 5px;}
+.center {text-align: center;}
+.alert {color:#C00; }
+.success {color: #0c9;}
+.clear {clear: both;}
+footer {clear: both; width: 100%; margin-top: 20px; padding: 0;}
+footer p {line-height: 60px;}
